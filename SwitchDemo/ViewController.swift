@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     @IBAction func btn_slider(_ sender: UISlider) {
         lbl_slidervalue.alpha =  1
         slider.value = round(slider.value)
-        lbl_slidervalue.text = "\(String(Int(sender.value)))0%"
+        lbl_slidervalue.text = "\(String(Int(sender.value)))%"
     }
     
 }
