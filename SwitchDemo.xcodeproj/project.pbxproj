@@ -12,6 +12,7 @@
 		04E3EA411F19E5C80049D71D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3EA3F1F19E5C80049D71D /* Main.storyboard */; };
 		04E3EA431F19E5C80049D71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E3EA421F19E5C80049D71D /* Assets.xcassets */; };
 		04E3EA461F19E5C80049D71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3EA441F19E5C80049D71D /* LaunchScreen.storyboard */; };
+		04E3EA561F1A127E0049D71D /* DesignableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3EA551F1A127E0049D71D /* DesignableSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		04E3EA421F19E5C80049D71D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E3EA451F19E5C80049D71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E3EA471F19E5C80049D71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E3EA551F1A127E0049D71D /* DesignableSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				04E3EA3B1F19E5C80049D71D /* AppDelegate.swift */,
 				04E3EA3D1F19E5C80049D71D /* ViewController.swift */,
+				04E3EA551F1A127E0049D71D /* DesignableSlider.swift */,
 				04E3EA3F1F19E5C80049D71D /* Main.storyboard */,
 				04E3EA421F19E5C80049D71D /* Assets.xcassets */,
 				04E3EA441F19E5C80049D71D /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E3EA3E1F19E5C80049D71D /* ViewController.swift in Sources */,
+				04E3EA561F1A127E0049D71D /* DesignableSlider.swift in Sources */,
 				04E3EA3C1F19E5C80049D71D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +301,7 @@
 				04E3EA4C1F19E5C80049D71D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
