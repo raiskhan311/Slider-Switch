@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btn_switch: UISwitch!
     
+    @IBOutlet weak var stepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,61 @@ class ViewController: UIViewController {
         slider.value = round(slider.value)
         lbl_slidervalue.text = "\(String(Int(sender.value)))%"
     }
+    
+    @IBAction func stp_Stepper(_ sender: UIStepper) {
+         lbl_slidervalue.alpha =  1
+        lbl_slidervalue.text = String(sender.value)
+    }
+    
+    @IBAction func alertview(_ sender: UIButton) {
+        let alert = UIAlertController(title: "My tittle here", message: "Hello", preferredStyle: .alert)
+        let action = UIAlertAction(title: "SAVE", style: .destructive) { (action) in
+            self.lbl_order.alpha = 1
+            self.lbl_order.text = alert.textFields?.first?.text
+        }
+        let action1 = UIAlertAction(title: "Exit", style: .destructive) { (action) in
+            print("this is the action of my alert")
+        }
+        alert.addTextField { (textfield) in
+            textfield.placeholder = "Please Enter Number"
+            textfield.keyboardType = .numberPad
+        }
+        alert.addAction(action)
+        alert.addAction(action1)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func action(_ sender: UIButton) {
+        let sheet = UIAlertController(title: "My Title", message: "Who are YOu", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Close", style: .destructive) { (action) in
+            print("this is the action of my sheet")
+        }
+        let action1 = UIAlertAction(title: "Exit", style: .destructive) { (action) in
+            print("this is the action of my sheet1")
+        }
+        sheet.addAction(action)
+        sheet.addAction(action1)
+        present(sheet, animated: true, completion: nil)
+    }
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    @IBAction func btn_star(_ sender: UIButton) {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    
+    @IBAction func btn_Stop(_ sender: UIButton) {
+        activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+
+    }
+    
     
 }
 
